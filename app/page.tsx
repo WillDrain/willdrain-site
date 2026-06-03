@@ -1,103 +1,127 @@
-const cards = [
-  {
-    title: "Modern websites",
-    body: "Fast, responsive sites built with Next.js, TypeScript, and Tailwind.",
-  },
-  {
-    title: "AI integrations",
-    body: "Practical AI tools and automations tailored for small & local businesses.",
-  },
-  {
-    title: "Ongoing tech help",
-    body: "Maintenance, automation, and the technical support that keeps things running.",
-  },
-];
-
-const links = [
+const socials = [
   {
     label: "GitHub",
     href: "https://github.com/WillDrain",
-    primary: true,
+    icon: (
+      <path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49 0-.24-.01-.88-.01-1.73-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.49-1.11-1.49-.91-.64.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.36-2.22-.26-4.55-1.14-4.55-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.27 2.75 1.05a9.36 9.36 0 0 1 2.5-.34c.85 0 1.71.12 2.5.34 1.91-1.32 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.81-4.57 5.06.36.32.68.94.68 1.9 0 1.37-.01 2.48-.01 2.82 0 .27.18.6.69.49A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2Z" />
+    ),
   },
   {
-    // TODO: replace {{YOUR_EMAIL}} with your real email address
     label: "Email",
     href: "mailto:{{YOUR_EMAIL}}",
-    primary: false,
+    icon: (
+      <>
+        <rect x="2" y="4" width="20" height="16" rx="2" />
+        <path d="m22 7-10 6L2 7" />
+      </>
+    ),
   },
   {
-    // TODO: replace {{YOUR_IG_URL}} with your real Instagram URL
     label: "Instagram",
     href: "{{YOUR_IG_URL}}",
-    primary: false,
+    icon: (
+      <>
+        <rect x="2" y="2" width="20" height="20" rx="5" />
+        <circle cx="12" cy="12" r="4" />
+        <circle cx="17.5" cy="6.5" r="1.2" />
+      </>
+    ),
+  },
+];
+
+const offerings = [
+  {
+    title: "Modern websites",
+    body: "Fast, responsive sites built with Next.js, TypeScript, and Tailwind — designed to look great and load quickly.",
+  },
+  {
+    title: "AI integrations",
+    body: "Practical AI tools and automations tailored to how small and local businesses actually work.",
+  },
+  {
+    title: "Ongoing tech help",
+    body: "Maintenance, automation, and friendly technical support that keeps everything running smoothly.",
   },
 ];
 
 export default function Home() {
   return (
-    <main className="mx-auto flex w-full max-w-2xl flex-col px-6 py-20 sm:px-8 sm:py-28">
-      {/* HERO */}
-      <section className="flex flex-col gap-4">
-        <h1 className="text-4xl font-semibold tracking-tight text-zinc-900 sm:text-5xl dark:text-zinc-50">
-          Will Drain
-        </h1>
-        <p className="text-lg font-medium text-indigo-600 sm:text-xl dark:text-indigo-400">
-          I build fast, modern websites and AI tools for small businesses.
+    <main className="mx-auto flex w-full max-w-2xl flex-col items-center px-6 py-20 sm:py-28">
+      {/* WORDMARK HEADER */}
+      <h1 className="text-center text-5xl font-extrabold tracking-tight text-foreground sm:text-6xl">
+        Will Drain
+      </h1>
+
+      {/* TAGLINE */}
+      <p className="mt-3 text-center text-base text-muted sm:text-lg">
+        Web &amp; AI for small businesses.
+      </p>
+
+      {/* SOCIAL LINKS */}
+      <div className="mt-6 flex items-center justify-center gap-5">
+        {socials.map((social) => {
+          const external = social.href.startsWith("http");
+          return (
+            <a
+              key={social.label}
+              href={social.href}
+              aria-label={social.label}
+              title={social.label}
+              target={external ? "_blank" : undefined}
+              rel={external ? "noopener noreferrer" : undefined}
+              className="text-primary transition-colors hover:text-accent"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                className="h-6 w-6"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.8"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                aria-hidden="true"
+              >
+                {social.icon}
+              </svg>
+            </a>
+          );
+        })}
+      </div>
+
+      {/* QUOTE OF THE DAY */}
+      <section className="mt-14 w-full rounded-xl border border-border bg-surface p-6 sm:p-8">
+        <p className="text-xs font-semibold uppercase tracking-widest text-secondary">
+          Quote of the Day
         </p>
-        <p className="max-w-xl text-base leading-7 text-zinc-600 dark:text-zinc-400">
-          From first launch to ongoing improvements, I help local teams ship
-          clean, reliable software that actually moves their business forward.
-        </p>
+        <blockquote className="mt-3 text-lg leading-relaxed text-foreground">
+          &ldquo;The best way to predict the future is to build it.&rdquo;
+        </blockquote>
+        <p className="mt-3 text-sm text-muted">— Placeholder Attribution</p>
       </section>
 
       {/* WHAT I DO */}
-      <section className="mt-16 flex flex-col gap-4">
-        <h2 className="text-sm font-semibold uppercase tracking-widest text-zinc-500 dark:text-zinc-500">
-          What I do
-        </h2>
-        <ul className="flex flex-col gap-4">
-          {cards.map((card) => (
+      <section className="mt-16 w-full">
+        <p className="text-center text-base leading-relaxed text-muted">
+          Hi, I&apos;m Will. I help small and local businesses get online and
+          stay there — building modern websites, adding AI where it actually
+          helps, and sticking around for the day-to-day tech stuff.
+        </p>
+
+        <ul className="mt-8 flex flex-col gap-4">
+          {offerings.map((offering) => (
             <li
-              key={card.title}
-              className="rounded-2xl border border-zinc-200 bg-white p-5 transition-colors hover:border-indigo-300 sm:p-6 dark:border-zinc-800 dark:bg-zinc-950 dark:hover:border-indigo-700"
+              key={offering.title}
+              className="rounded-xl border border-border bg-surface p-5 transition-colors hover:border-secondary sm:p-6"
             >
-              <h3 className="text-base font-semibold text-zinc-900 sm:text-lg dark:text-zinc-100">
-                {card.title}
-              </h3>
-              <p className="mt-1.5 text-sm leading-6 text-zinc-600 sm:text-base dark:text-zinc-400">
-                {card.body}
+              <h2 className="text-lg font-semibold text-foreground">
+                {offering.title}
+              </h2>
+              <p className="mt-1.5 text-sm leading-6 text-muted sm:text-base">
+                {offering.body}
               </p>
             </li>
           ))}
         </ul>
-      </section>
-
-      {/* LINKS */}
-      <section className="mt-16 flex flex-col gap-4">
-        <h2 className="text-sm font-semibold uppercase tracking-widest text-zinc-500 dark:text-zinc-500">
-          Get in touch
-        </h2>
-        <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-          {links.map((link) => (
-            <a
-              key={link.label}
-              href={link.href}
-              target={link.href.startsWith("http") ? "_blank" : undefined}
-              rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
-              className={
-                link.primary
-                  ? "flex h-12 items-center justify-center rounded-full bg-indigo-600 px-6 text-sm font-medium text-white transition-colors hover:bg-indigo-500 sm:w-auto"
-                  : "flex h-12 items-center justify-center rounded-full border border-zinc-300 px-6 text-sm font-medium text-zinc-800 transition-colors hover:border-indigo-400 hover:text-indigo-600 sm:w-auto dark:border-zinc-700 dark:text-zinc-200 dark:hover:border-indigo-500 dark:hover:text-indigo-400"
-              }
-            >
-              {link.label}
-            </a>
-          ))}
-        </div>
-        <p className="text-xs text-zinc-400 dark:text-zinc-600">
-          TODO: replace {"{{YOUR_EMAIL}}"} and {"{{YOUR_IG_URL}}"} above with your
-          real details.
-        </p>
       </section>
     </main>
   );
