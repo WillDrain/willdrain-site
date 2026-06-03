@@ -1,26 +1,22 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/* Coastal Night palette */
+@theme {
+  --color-background: #0f172a; /* deep navy — page bg */
+  --color-surface: #162033; /* card bg */
+  --color-foreground: #f8fafc; /* default text */
+  --color-muted: #cbd5e1; /* secondary text */
+  --color-primary: #38bdf8; /* ocean blue — links */
+  --color-accent: #f97316; /* sunset orange — CTAs */
+  --color-secondary: #14b8a6; /* seafoam teal — supporting accent */
+  --color-border: #263449; /* borders/dividers */
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background: var(--color-background);
+  color: var(--color-foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
