@@ -1,3 +1,6 @@
+import QuoteTicker from "@/components/QuoteTicker";
+import quotes from "@/data/quotes.json";
+
 const socials = [
   {
     label: "GitHub",
@@ -63,6 +66,10 @@ const offerings = [
 ];
 
 export default function Home() {
+  // Single quote for now. To rotate by date later, e.g.:
+  // const quote = quotes[dayOfYear % quotes.length];
+  const quote = quotes[0];
+
   return (
     <main className="mx-auto flex w-full max-w-2xl flex-col items-center px-6 py-20 sm:py-28">
       {/* WORDMARK HEADER */}
@@ -106,16 +113,8 @@ export default function Home() {
         })}
       </div>
 
-      {/* QUOTE OF THE DAY */}
-      <section className="mt-14 w-full rounded-xl border border-border bg-surface p-6 sm:p-8">
-        <p className="text-xs font-semibold uppercase tracking-widest text-secondary">
-          Quote of the Day
-        </p>
-        <blockquote className="mt-3 text-lg leading-relaxed text-foreground">
-          &ldquo;The best way to predict the future is to build it.&rdquo;
-        </blockquote>
-        <p className="mt-3 text-sm text-muted">— Placeholder Attribution</p>
-      </section>
+      {/* QUOTE OF THE DAY — LED ticker */}
+      <QuoteTicker text={quote.text} author={quote.author} />
 
       {/* WHAT I DO */}
       <section className="mt-16 w-full">
