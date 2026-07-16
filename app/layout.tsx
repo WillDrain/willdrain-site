@@ -1,21 +1,17 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const inter = Inter({
+  variable: "--font-inter-sans",
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
-  title: "Will Drain — Web & AI for Small Business",
+  title: "Will Drain — Developer",
   description:
-    "Will Drain builds fast, modern websites and practical AI tools for small and local businesses.",
+    "The work of Will Drain — a developer building modern web apps and practical AI.",
 };
 
 export default function RootLayout({
@@ -24,11 +20,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col">{children}</body>
+    <html lang="en" className={`${inter.variable} h-full antialiased`}>
+      <head>
+        {/* PODIUM display font for the brand + headings */}
+        <link
+          rel="stylesheet"
+          href="https://db.onlinewebfonts.com/c/8b75d9dcff6a48c35a46656192adf019?family=FSP+DEMO+-+PODIUM+Sharp+4.11"
+        />
+      </head>
+      <body className="min-h-full bg-black">{children}</body>
     </html>
   );
 }
