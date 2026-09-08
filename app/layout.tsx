@@ -9,9 +9,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Will Drain — Developer",
+  title: "Will Drain",
   description:
-    "The work of Will Drain — a developer building modern web apps and practical AI.",
+    "Notes on books. Takes on ideas. The occasional build. Full-stack when it ships. Practical AI when it earns its keep.",
 };
 
 export default function RootLayout({
@@ -28,7 +28,7 @@ export default function RootLayout({
           href="https://db.onlinewebfonts.com/c/8b75d9dcff6a48c35a46656192adf019?family=FSP+DEMO+-+PODIUM+Sharp+4.11"
         />
       </head>
-      <body className="min-h-full bg-black">{children}</body>
+      <body className="min-h-full bg-night">{children}</body>
     </html>
   );
 }
