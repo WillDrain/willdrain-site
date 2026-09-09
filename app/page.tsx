@@ -187,22 +187,14 @@ export default function Home() {
         {/* Hero content */}
         <div className="relative z-20 flex flex-1 items-center px-6 sm:px-10 lg:px-16">
           <div className="animate-fade-in max-w-3xl">
-            <h1 className="font-podium leading-[1.08] tracking-tight text-foreground">
-              <span className="block text-[clamp(1.85rem,5.4vw,4.4rem)]">
-                Notes on books.
+            <h1 className="font-podium leading-[1.05] tracking-tight text-foreground">
+              <span className="block text-[clamp(2.4rem,7vw,5.75rem)]">
+                Full-stack.
               </span>
-              <span className="block text-[clamp(1.85rem,5.4vw,4.4rem)]">
-                Takes on ideas.
-              </span>
-              <span className="block text-[clamp(1.85rem,5.4vw,4.4rem)] text-foreground/80">
-                The occasional build.
+              <span className="block text-[clamp(2.4rem,7vw,5.75rem)]">
+                Practical AI.
               </span>
             </h1>
-
-            <p className="mt-6 max-w-md text-pretty font-inter text-sm leading-relaxed text-muted sm:text-base lg:mt-8">
-              Full-stack when it ships. Practical AI when it earns its keep. The
-              rest is reading.
-            </p>
 
             <a
               href="#work"

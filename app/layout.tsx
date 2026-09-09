@@ -10,8 +10,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "Will Drain",
-  description:
-    "Notes on books. Takes on ideas. The occasional build. Full-stack when it ships. Practical AI when it earns its keep.",
+  description: "Full-stack. Practical AI. The work of Will Drain.",
 };
 
 export default function RootLayout({
