@@ -119,7 +119,7 @@ export default function Home() {
           fill
           priority
           sizes="100vw"
-          className="absolute inset-0 z-0 object-cover object-[78%_center]"
+          className="absolute inset-0 z-0 object-cover object-[80%_center]"
         />
 
         {!videoFailed && (
@@ -130,16 +130,13 @@ export default function Home() {
             playsInline
             poster={HERO_POSTER}
             aria-hidden="true"
-            className="hero-video absolute inset-0 z-[1] h-full w-full object-cover object-[78%_center]"
+            className="hero-video absolute inset-0 z-[1] h-full w-full object-cover object-[80%_center]"
             onError={() => setVideoFailed(true)}
           >
             <source src={VIDEO_URL} type="video/mp4" />
           </video>
         )}
 
-        <div className="hero-multiply pointer-events-none absolute inset-0 z-10" />
-        <div className="hero-dawn pointer-events-none absolute inset-0 z-10" />
-        <div className="hero-fringe pointer-events-none absolute inset-0 z-10" />
         <div className="hero-scrim pointer-events-none absolute inset-0 z-10" />
 
         {/* Navbar */}
