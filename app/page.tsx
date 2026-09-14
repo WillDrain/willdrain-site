@@ -62,6 +62,17 @@ const projects: Project[] = [
   },
   {
     index: "03",
+    title: "King Sauce",
+    tagline: "Live brand site",
+    body: "Live site for a South Jersey condiment brand. Story, stockists, wholesale, Instagram-first ordering. Live and shipping.",
+    tech: ["Next.js", "TypeScript", "Tailwind", "Vercel"],
+    live: "https://king-sauce.com",
+    images: [
+      { src: "/projects/kingsauce-hero.png", alt: "King Sauce homepage" },
+    ],
+  },
+  {
+    index: "04",
     title: "ReViewline",
     tagline: "RAG over real reviews",
     body: "RAG over real reviews with evals that catch hallucinated citations before they ship.",
