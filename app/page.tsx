@@ -63,12 +63,16 @@ const projects: Project[] = [
   {
     index: "03",
     title: "King Sauce",
-    tagline: "Live brand site",
-    body: "Live site for a South Jersey condiment brand. Story, stockists, wholesale, Instagram-first ordering. Live and shipping.",
-    tech: ["Next.js", "TypeScript", "Tailwind", "Vercel"],
-    live: "https://king-sauce.com",
+    tagline: "for Grand Royal Foods",
+    body: "Marketing site for Grand Royal Foods. Stockist finder, IG-DM ordering, consent-aware GA4, Search Console–ready SEO.",
+    tech: ["Next.js", "TypeScript", "Vercel", "GA4", "JSON-LD / local SEO"],
+    live: "https://www.king-sauce.com",
     images: [
       { src: "/projects/kingsauce-hero.png", alt: "King Sauce homepage" },
+      {
+        src: "/projects/kingsauce-findit.png",
+        alt: "King Sauce stockist map for South Jersey and Philly",
+      },
     ],
   },
   {
