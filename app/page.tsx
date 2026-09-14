@@ -65,7 +65,14 @@ const projects: Project[] = [
     title: "King Sauce",
     tagline: "for Grand Royal Foods",
     body: "Marketing site for Grand Royal Foods. Stockist finder, IG-DM ordering, consent-aware GA4, Search Console–ready SEO.",
-    tech: ["Next.js", "TypeScript", "Vercel", "GA4", "JSON-LD / local SEO"],
+    tech: [
+      "Next.js",
+      "Vercel",
+      "TypeScript",
+      "GA4",
+      "Google Search Console",
+      "JSON-LD / local SEO",
+    ],
     live: "https://www.king-sauce.com",
     images: [
       { src: "/projects/kingsauce-hero.png", alt: "King Sauce homepage" },
