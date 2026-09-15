@@ -33,7 +33,7 @@ const projects: Project[] = [
     index: "01",
     title: "Tide & Table",
     tagline: "Boardwalk reservation system",
-    body: "Real rules, admin dashboard, AI concierge that stays on the menu.",
+    body: "Reservation system with Zod-validated booking rules, an admin dashboard, and an AI concierge limited to menu, hours, and policies.",
     tech: ["Next.js", "TypeScript", "Prisma", "PostgreSQL", "Zod"],
     live: "https://restaurant-concept-demo.vercel.app/",
     code: "https://github.com/WillDrain/restaurant-concept-demo",
@@ -53,7 +53,7 @@ const projects: Project[] = [
     index: "02",
     title: "Jones Pressure Washing",
     tagline: "South Jersey, live",
-    body: "Live site for a South Jersey business. Gallery, reviews, click-to-call, local SEO. Still bringing in work.",
+    body: "Live marketing site for a South Jersey pressure-washing business. Gallery, reviews, click-to-call, and local SEO.",
     tech: ["Next.js", "TypeScript", "Tailwind", "SEO / JSON-LD"],
     live: "https://jonespressurewashnj.com",
     images: [
@@ -64,7 +64,7 @@ const projects: Project[] = [
     index: "03",
     title: "King Sauce",
     tagline: "for Grand Royal Foods",
-    body: "Marketing site for Grand Royal Foods. Stockist finder, IG-DM ordering, consent-aware GA4, Search Console–ready SEO.",
+    body: "Marketing site for Grand Royal Foods. Stockist finder, Instagram DM ordering, consent-aware GA4, and Search Console SEO.",
     tech: [
       "Next.js",
       "Vercel",
@@ -86,7 +86,7 @@ const projects: Project[] = [
     index: "04",
     title: "ReViewline",
     tagline: "RAG over real reviews",
-    body: "RAG over real reviews with evals that catch hallucinated citations before they ship.",
+    body: "RAG over customer reviews. An evaluation suite rejects answers with unsupported citations.",
     tech: ["RAG", "pgvector", "Embeddings", "Anthropic API", "Evals"],
     writeup: "https://lnkd.in/p/eugrXHCX",
     status: "In progress",
@@ -388,15 +388,14 @@ export default function Home() {
 
           <div className="space-y-5 text-sm leading-relaxed text-foreground/75 sm:text-base">
             <p>
-              Will Drain. Rowan CS. Years in kitchens, bars, and blue-collar
-              jobs before the degree — composure under pressure, then code.
+              Will Drain. B.S. in Computer Science from Rowan University. Years
+              in kitchens, bars, and blue-collar jobs before the degree. That
+              work taught composure under pressure. Same habits now go into
+              engineering.
             </p>
             <p>
-              Interested in practical AI: RAG, embeddings, evals. Reader-writer
-              with a technical mind. Books and ideas first; builds as proof.
-            </p>
-            <p className="text-muted">
-              The notebook fills first. The repo follows.
+              I build and ship full-stack web apps. Focus: RAG, embeddings, and
+              evals for practical AI.
             </p>
             <p className="pt-4 text-xs tracking-wide text-muted">
               Next.js · TypeScript · Postgres · practical AI
