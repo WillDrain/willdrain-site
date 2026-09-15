@@ -62,6 +62,28 @@ const projects: Project[] = [
   },
   {
     index: "03",
+    title: "King Sauce",
+    tagline: "for Grand Royal Foods",
+    body: "Marketing site for Grand Royal Foods. Stockist finder, IG-DM ordering, consent-aware GA4, Search Console–ready SEO.",
+    tech: [
+      "Next.js",
+      "Vercel",
+      "TypeScript",
+      "GA4",
+      "Google Search Console",
+      "JSON-LD / local SEO",
+    ],
+    live: "https://www.king-sauce.com",
+    images: [
+      { src: "/projects/kingsauce-hero.png", alt: "King Sauce homepage" },
+      {
+        src: "/projects/kingsauce-findit.png",
+        alt: "King Sauce stockist map for South Jersey and Philly",
+      },
+    ],
+  },
+  {
+    index: "04",
     title: "ReViewline",
     tagline: "RAG over real reviews",
     body: "RAG over real reviews with evals that catch hallucinated citations before they ship.",
