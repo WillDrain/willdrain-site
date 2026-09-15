@@ -16,7 +16,7 @@ const oswald = Oswald({
 
 export const metadata: Metadata = {
   title: "Will Drain",
-  description: "Full-stack. Practical AI. The work of Will Drain.",
+  description: "Full-stack. Practical AI. Work by Will Drain.",
 };
 
 export default function RootLayout({
